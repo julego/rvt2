@@ -28,7 +28,7 @@ pylnk = "*"
 libesedb-python = "*"
 tqdm = "*"
 ujson = "*"
-ActivitiesCacheParser = {git = "https://github.com/forensicmatt/ActivitiesCacheParser.git",ref = "master"}
+winactivities = {git = "https://github.com/forensicmatt/ActivitiesCacheParser.git",ref = "master"}
 lz4 = "*"
 chardet = "*"
 pyyaml = "*"

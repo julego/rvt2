@@ -60,7 +60,7 @@ install_debian_deps() {
         libscca1 libscca-utils python3-libscca \
         libmsiecf1 libmsiecf-utils python3-libmsiecf \
         liblnk1 liblnk-utils python3-liblnk \
-        fuse3 libfuse3-dev libicu-dev libattr1-dev
+        fuse3 libfuse-dev libfuse3-dev libicu-dev libattr1-dev
     apt-get install -y libparse-win32registry-perl # regripper
 }
 
@@ -196,12 +196,12 @@ build_install_libfvde() {
 }
 
 build_install_regripper() (
-    local NAME="RegRipper2.8"
-    local COMMIT="ee874d5245fb4f26147c29dc1db02b8e68a88698"
+    local NAME="RegRipper3.0"
+    local COMMIT="0910a3ab8e4586cf46aa115e04ced32d3a1dc6d6"
     [ -d /tmp/patches ] || cp -rp patches /tmp/
     cd "${SRCDIR}"
     _download_verify "https://github.com/keydet89/${NAME}/archive/${COMMIT}.zip" \
-        "9cea8786588417b89a6f9497d8d97222f5f7daeaf276b40a2cd02157ea121b2e"
+        "30912ea5e2e141c448b2a24caf3f4db52d23e36ab153a8e4d3a4f6817e2bd21e"
     mv "${COMMIT}".zip ${NAME}-${COMMIT}.zip
     unzip ${NAME}-${COMMIT}.zip
     cd ${NAME}-${COMMIT}
